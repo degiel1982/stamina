@@ -5,7 +5,7 @@ end
 
 stamina = {}
 local modname = minetest.get_current_modname()
-local dirt_texture = "default:dirt"
+local dirt_texture = "default_dirt_png"
 if minetest.get_modpath("xcompat") and minetest.global_exists("xcompat") then
 	dirt_texture = xcompat.textures.grass.dirt
 end
@@ -326,7 +326,7 @@ function stamina.set_sprinting(player, sprinting)
 				maxsize = 1.0,
 				vertical = false,
 				collisiondetection = false,
-				texture = "default_dirt.png",
+				texture = dirt_texture,
 			})
 		end
 	end
