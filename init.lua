@@ -5,9 +5,11 @@ end
 
 stamina = {}
 local modname = minetest.get_current_modname()
-local dirt_texture = "default_dirt_png"
+local dirt_texture = ""
 if minetest.get_modpath("xcompat") and minetest.global_exists("xcompat") then
 	dirt_texture = xcompat.textures.grass.dirt
+else
+    dirt_texture = "default_dirt.png"
 end
 local dirt_texture = xcompat.textures.dirt.grass
 local armor_mod = minetest.get_modpath("3d_armor") and minetest.global_exists("armor") and armor.def
